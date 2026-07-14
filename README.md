@@ -1,5 +1,11 @@
 # 🎓 Student Performance Analytics Dashboard
 
+## Badges Section
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Completed-success)
+![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black)
+
 A Python-based analytics dashboard designed to manage student records, calculate academic performance, generate reports, and visualize student data. The system helps educators and administrators monitor student progress through automated analysis and graphical reports.
 
 ---
