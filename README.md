@@ -26,6 +26,19 @@ A Python-based analytics dashboard designed to manage student records, calculate
 
 ---
 
+## 💡 Skills Demonstrated
+
+- Python Programming
+- Object-Oriented Programming (OOP)
+- Data Analysis
+- Data Visualization
+- CSV File Handling
+- Exception Handling
+- File Management
+- Software Design
+- Git & GitHub
+- Problem Solving
+  
 ## Graphical User Interface (GUI)
 
 The project includes a modern Tkinter-based graphical interface that allows users to:
@@ -42,12 +55,14 @@ The GUI is beginner-friendly and designed for educational institutions.
 
 ## 🛠️ Technologies Used
 
-- Python
+- Python 3
+- Tkinter
 - Pandas
+- NumPy
 - Matplotlib
 - CSV File Handling
-- NumPy
-
+- Object-Oriented Programming (OOP)
+- Git & GitHub
 ---
 
 ## 📂 Project Structure
@@ -118,17 +133,25 @@ Add a screenshot of the reports here.
 
 ### Charts
 
-Add screenshots of the generated charts here.
+<img width="828" height="836" alt="1000022530" src="https://github.com/user-attachments/assets/3651a0fa-8790-439b-8725-0f7fd274ac91" />
+
+<img width="828" height="780" alt="1000022529" src="https://github.com/user-attachments/assets/7154427e-399b-49fd-85cb-f17b38a4e00a" />
+
 
 ---
 
 ## 📈 Future Improvements
 
-- Connect the system to a MySQL database.
-- Generate PDF reports.
-- Add user authentication.
-- Export reports in multiple formats.
-- Create an online dashboard.
+- Dark Mode support
+- MySQL/PostgreSQL database integration
+- PDF report generation
+- User authentication and role management
+- Excel export functionality
+- Email report notifications
+- Machine Learning grade prediction
+- Attendance management
+- Web-based dashboard using Flask or Django
+- Docker deployment
 
 ---
 
@@ -168,6 +191,17 @@ ST005,Michael Jones,55,60,58,62,58.75,Pass
 
 
 ---
+## 📚 Learning Outcomes
+
+This project strengthened my understanding of:
+
+- Data analysis with Python
+- Data visualization techniques
+- CSV data management
+- Building desktop applications
+- Modular programming
+- Creating professional software documentation
+- Version control using Git and GitHub
 
 ## 👨‍💻 Author
 
