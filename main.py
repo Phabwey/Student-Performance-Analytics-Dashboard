@@ -237,9 +237,9 @@ def menu():
 
         elif choice == "6":
 
-            print("\nThank you for using the Student Performance Dashboard.")
-            print("Goodbye!\n")
-            break
+    print("\nThank you for using the Student Performance Dashboard.")
+    print("Goodbye!\n")
+    break
 
         else:
 
