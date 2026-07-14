@@ -207,45 +207,42 @@ def menu():
 
         print("\n===== STUDENT PERFORMANCE DASHBOARD =====")
 
-print("1. Add Student")
-print("2. View Students")
-print("3. Search Student")
-print("4. Generate Report")
-print("5. Display Top Performing Student")
-print("6. Exit")
+        print("1. Add Student")
+        print("2. View Students")
+        print("3. Search Student")
+        print("4. Generate Report")
+        print("5. Display Top Performing Student")
+        print("6. Exit")
 
-        choice = input(
-            "Choose an option: "
-        )
+        choice = input("Choose an option: ")
 
-        
-if choice == "1":
+        if choice == "1":
 
-    add_student()
+            add_student()
 
-elif choice == "2":
+        elif choice == "2":
 
-    view_students()
+            view_students()
 
-elif choice == "3":
+        elif choice == "3":
 
-    search_student()
+            search_student()
 
-elif choice == "4":
+        elif choice == "4":
 
-    generate_report()
+            generate_report()
 
-elif choice == "5":
+        elif choice == "5":
 
-    display_top_student()
+            display_top_student()
 
-elif choice == "6":
+        elif choice == "6":
 
-    print("Goodbye.")
-    break
+            print("Goodbye.")
+            break
 
-else:
+        else:
 
-    print("Invalid option.")
+            print("Invalid option.")
 
 menu()
