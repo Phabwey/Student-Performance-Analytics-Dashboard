@@ -198,7 +198,6 @@ def generate_report():
     )
     print()
 
-
 def menu():
 
     create_file()
@@ -238,11 +237,16 @@ def menu():
 
         elif choice == "6":
 
-            print("Goodbye.")
+            print("\nThank you for using the Student Performance Dashboard.")
+            print("Goodbye!\n")
             break
 
         else:
 
-            print("Invalid option.")
+            print("\nInvalid option. Please try again.\n")
 
-menu()
+
+if __name__ == "__main__":
+    menu()
+
+
