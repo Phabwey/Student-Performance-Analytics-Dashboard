@@ -124,7 +124,6 @@ Add screenshots of the generated charts here.
 
 ## 📈 Future Improvements
 
-- Add a graphical user interface (GUI).
 - Connect the system to a MySQL database.
 - Generate PDF reports.
 - Add user authentication.
