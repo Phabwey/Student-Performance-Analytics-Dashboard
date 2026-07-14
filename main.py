@@ -113,6 +113,43 @@ def search_student():
     if not found:
         print("Student not found.")
 
+def display_top_student():
+
+    highest_average = -1
+    top_student = None
+
+    try:
+        with open(FILE_NAME, "r") as file:
+
+            reader = csv.DictReader(file)
+
+            for row in reader:
+
+                average = float(row["average"])
+
+                if average > highest_average:
+                    highest_average = average
+                    top_student = row
+
+        if top_student is None:
+            print("\nNo student records available.\n")
+            return
+
+        print("\n" + "=" * 50)
+        print("🏆 TOP PERFORMING STUDENT")
+        print("=" * 50)
+        print(f"Student ID   : {top_student['student_id']}")
+        print(f"Name         : {top_student['name']}")
+        print(f"Mathematics  : {top_student['mathematics']}")
+        print(f"Programming  : {top_student['programming']}")
+        print(f"Networking   : {top_student['networking']}")
+        print(f"Database     : {top_student['database']}")
+        print(f"Average      : {top_student['average']}%")
+        print(f"Status       : {top_student['status']}")
+        print("=" * 50)
+
+    except FileNotFoundError:
+        print("\nNo student records found.\n")
 
 def generate_report():
 
@@ -170,40 +207,45 @@ def menu():
 
         print("\n===== STUDENT PERFORMANCE DASHBOARD =====")
 
-        print("1. Add Student")
-        print("2. View Students")
-        print("3. Search Student")
-        print("4. Generate Report")
-        print("5. Exit")
+print("1. Add Student")
+print("2. View Students")
+print("3. Search Student")
+print("4. Generate Report")
+print("5. Display Top Performing Student")
+print("6. Exit")
 
         choice = input(
             "Choose an option: "
         )
 
-        if choice == "1":
+        
+if choice == "1":
 
-            add_student()
+    add_student()
 
-        elif choice == "2":
+elif choice == "2":
 
-            view_students()
+    view_students()
 
-        elif choice == "3":
+elif choice == "3":
 
-            search_student()
+    search_student()
 
-        elif choice == "4":
+elif choice == "4":
 
-            generate_report()
+    generate_report()
 
-        elif choice == "5":
+elif choice == "5":
 
-            print("Goodbye.")
-            break
+    display_top_student()
 
-        else:
+elif choice == "6":
 
-            print("Invalid option.")
+    print("Goodbye.")
+    break
 
+else:
+
+    print("Invalid option.")
 
 menu()
