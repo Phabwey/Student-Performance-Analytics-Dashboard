@@ -26,6 +26,20 @@ A Python-based analytics dashboard designed to manage student records, calculate
 
 ---
 
+## Graphical User Interface (GUI)
+
+The project includes a modern Tkinter-based graphical interface that allows users to:
+
+- Import student datasets
+- View performance statistics
+- Generate visual charts
+- Filter records
+- Search students
+- Export reports
+- Display summary analytics
+
+The GUI is beginner-friendly and designed for educational institutions.
+
 ## 🛠️ Technologies Used
 
 - Python
