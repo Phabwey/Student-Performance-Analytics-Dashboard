@@ -120,12 +120,39 @@ Add screenshots of the generated charts here.
 ---
 
 ## 📋 Sample Data
+## Student CSV Format
 
-| Student ID | Name | Average | Status |
-|------------|--------|----------|----------|
-| 1001 | John Doe | 85% | Pass |
-| 1002 | Jane Smith | 72% | Pass |
-| 1003 | Michael Brown | 48% | Fail |
+The system stores student records in a file called `students.csv`.
+
+### CSV Header
+
+```csv
+student_id,name,mathematics,programming,networking,database,average,status
+```
+
+### Sample Data
+
+```csv
+ST001,John Smith,78,85,80,76,79.75,Pass
+ST002,Mary Johnson,65,70,68,72,68.75,Pass
+ST003,David Brown,45,50,48,52,48.75,Fail
+ST004,Sarah Williams,90,88,92,91,90.25,Pass
+ST005,Michael Jones,55,60,58,62,58.75,Pass
+```
+
+### Description of Fields
+
+| Field | Description |
+|--------|-------------|
+| student_id | Unique student identifier |
+| name | Student name |
+| mathematics | Mathematics mark |
+| programming | Programming mark |
+| networking | Networking mark |
+| database | Database mark |
+| average | Calculated average score |
+| status | Pass or Fail |
+
 
 ---
 
