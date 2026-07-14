@@ -132,8 +132,11 @@ Add a screenshot of the dashboard here.
 Add a screenshot of the reports here.
 
 ### Charts
+performance_chart.png
 
 <img width="828" height="836" alt="1000022530" src="https://github.com/user-attachments/assets/3651a0fa-8790-439b-8725-0f7fd274ac91" />
+
+pass_fail_chart.png
 
 <img width="828" height="780" alt="1000022529" src="https://github.com/user-attachments/assets/7154427e-399b-49fd-85cb-f17b38a4e00a" />
 
