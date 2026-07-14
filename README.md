@@ -212,20 +212,29 @@ This project strengthened my understanding of:
 - Creating professional software documentation
 - Version control using Git and GitHub
 
+## 🎯 Project Purpose
+
+This application was developed to demonstrate practical Python programming skills by combining data analysis, file handling, visualization, and desktop application development into one complete project. It serves as a portfolio project showcasing software engineering best practices and analytical problem-solving.
+
 ## 👨‍💻 Author
 
 **Paballo Litabe**
 
-- Bachelor of Information Technology in Business Systems Graduate
-- Python Developer
-- IT Support & Systems Enthusiast
+Bachelor of Information Technology in Business Systems Graduate
 
-GitHub Profile:
+### Areas of Interest
 
+- Python Development
+- Data Analytics
+- Business Systems
+- IT Support
+- Software Development
+- Data Visualization
+
+GitHub:
 https://github.com/Phabwey
 
 LinkedIn:
-
 https://linkedin.com/in/paballo-litabe
 
 ---
