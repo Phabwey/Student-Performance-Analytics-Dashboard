@@ -44,7 +44,9 @@ A Python-based analytics dashboard designed to manage student records, calculate
 - Software Design
 - Git & GitHub
 - Problem Solving
-  
+
+---
+
 ## Graphical User Interface (GUI)
 
 The project includes a modern Tkinter-based graphical interface that allows users to:
@@ -59,16 +61,17 @@ The project includes a modern Tkinter-based graphical interface that allows user
 
 The GUI is beginner-friendly and designed for educational institutions.
 
-## 🛠️ Technologies Used
+---
+## Technologies used
 
 - Python 3
 - Tkinter
 - Pandas
 - NumPy
 - Matplotlib
-- CSV File Handling
-- Object-Oriented Programming (OOP)
-- Git & GitHub
+- CSV
+- Git
+- GitHub
 ---
 
 ## 📂 Project Structure
@@ -96,6 +99,16 @@ Student-Performance-Analytics-Dashboard/
     ├── performance_chart.png
     └── pass_fail_chart.png
 ```
+
+---
+## 📦 Requirements
+
+- Python 3.10 or later
+- pip
+- Pandas
+- NumPy
+- Matplotlib
+- Tkinter
 
 ---
 
@@ -145,7 +158,6 @@ performance_chart.png
 pass_fail_chart.png
 
 <img width="828" height="780" alt="1000022529" src="https://github.com/user-attachments/assets/7154427e-399b-49fd-85cb-f17b38a4e00a" />
-
 
 ---
 
@@ -215,6 +227,8 @@ This project strengthened my understanding of:
 ## 🎯 Project Purpose
 
 This application was developed to demonstrate practical Python programming skills by combining data analysis, file handling, visualization, and desktop application development into one complete project. It serves as a portfolio project showcasing software engineering best practices and analytical problem-solving.
+
+---
 
 ## 👨‍💻 Author
 
