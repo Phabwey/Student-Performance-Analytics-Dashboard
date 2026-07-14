@@ -22,13 +22,19 @@ def create_file():
 
 
 def add_student():
+
     student_id = input("Enter student ID: ")
     name = input("Enter student name: ")
 
-    mathematics = float(input("Mathematics mark: "))
-    programming = float(input("Programming mark: "))
-    networking = float(input("Networking mark: "))
-    database = float(input("Database mark: "))
+    try:
+        mathematics = float(input("Mathematics mark: "))
+        programming = float(input("Programming mark: "))
+        networking = float(input("Networking mark: "))
+        database = float(input("Database mark: "))
+
+    except ValueError:
+        print("\nPlease enter valid numbers.\n")
+        return
 
     average = (
         mathematics +
@@ -43,6 +49,7 @@ def add_student():
         status = "Fail"
 
     with open(FILE_NAME, "a", newline="") as file:
+
         writer = csv.writer(file)
 
         writer.writerow([
@@ -60,8 +67,11 @@ def add_student():
 
 
 def view_students():
+
     try:
+
         with open(FILE_NAME, "r") as file:
+
             reader = csv.reader(file)
 
             print("\n----- STUDENT RECORDS -----")
@@ -76,44 +86,79 @@ def view_students():
 
 
 def search_student():
-    search_id = input("Enter student ID: ")
+
+    search = input(
+        "Enter student ID or name: "
+    ).lower()
 
     found = False
 
     with open(FILE_NAME, "r") as file:
+
         reader = csv.reader(file)
 
+        next(reader)
+
         for row in reader:
-            if row[0] == search_id:
+
+            if (
+                row[0].lower() == search or
+                row[1].lower() == search
+            ):
+
                 print("\nStudent found:")
                 print(" | ".join(row))
                 found = True
-                break
 
     if not found:
         print("Student not found.")
 
 
 def generate_report():
+
     total_students = 0
     passed = 0
     failed = 0
+    total_average = 0
+
+    top_student = ""
+    highest_average = 0
 
     with open(FILE_NAME, "r") as file:
+
         reader = csv.DictReader(file)
 
         for row in reader:
+
+            average = float(row["average"])
+
             total_students += 1
+            total_average += average
 
             if row["status"] == "Pass":
                 passed += 1
             else:
                 failed += 1
 
-    print("\n----- REPORT -----")
+            if average > highest_average:
+                highest_average = average
+                top_student = row["name"]
+
+    if total_students > 0:
+        class_average = total_average / total_students
+    else:
+        class_average = 0
+
+    print("\n----- CLASS REPORT -----")
     print(f"Total students: {total_students}")
     print(f"Passed: {passed}")
     print(f"Failed: {failed}")
+    print(
+        f"Class average: {class_average:.2f}%"
+    )
+    print(
+        f"Top student: {top_student} ({highest_average:.2f}%)"
+    )
     print()
 
 
@@ -123,32 +168,41 @@ def menu():
 
     while True:
 
-        print("===== STUDENT PERFORMANCE DASHBOARD =====")
+        print("\n===== STUDENT PERFORMANCE DASHBOARD =====")
+
         print("1. Add Student")
         print("2. View Students")
         print("3. Search Student")
         print("4. Generate Report")
         print("5. Exit")
 
-        choice = input("Choose an option: ")
+        choice = input(
+            "Choose an option: "
+        )
 
         if choice == "1":
+
             add_student()
 
         elif choice == "2":
+
             view_students()
 
         elif choice == "3":
+
             search_student()
 
         elif choice == "4":
+
             generate_report()
 
         elif choice == "5":
+
             print("Goodbye.")
             break
 
         else:
+
             print("Invalid option.")
 
 
