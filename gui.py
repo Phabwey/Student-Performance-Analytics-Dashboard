@@ -7,8 +7,11 @@ FILE_NAME = "students.csv"
 
 
 def create_file():
+
     if not os.path.exists(FILE_NAME):
+
         with open(FILE_NAME, "w", newline="") as file:
+
             writer = csv.writer(file)
 
             writer.writerow([
@@ -21,23 +24,30 @@ def create_file():
                 "average",
                 "status"
             ])
+
+
 def add_student():
 
     student_id = entry_id.get()
     name = entry_name.get()
 
     try:
+
         mathematics = float(entry_math.get())
         programming = float(entry_programming.get())
         networking = float(entry_networking.get())
         database = float(entry_database.get())
 
     except ValueError:
+
         messagebox.showerror(
             "Error",
             "Please enter valid marks."
         )
+
         return
+
+    # Validate marks
 
     if (
         mathematics < 0 or mathematics > 100 or
@@ -50,7 +60,10 @@ def add_student():
             "Error",
             "Marks must be between 0 and 100."
         )
+
         return
+
+    # Check duplicate student ID
 
     with open(FILE_NAME, "r") as file:
 
@@ -100,6 +113,7 @@ def add_student():
 
     clear_fields()
 
+
 def clear_fields():
 
     entry_id.delete(0, tk.END)
@@ -119,6 +133,7 @@ def view_students():
         reader = csv.reader(file)
 
         for row in reader:
+
             text_output.insert(
                 tk.END,
                 " | ".join(row) + "\n"
@@ -153,25 +168,24 @@ def generate_report():
                 failed += 1
 
             if average > highest_average:
+
                 highest_average = average
                 top_student = row["name"]
 
     if total_students > 0:
-        class_average = (
-            total_average /
-            total_students
-        )
+
+        class_average = total_average / total_students
+
     else:
+
         class_average = 0
 
     report = (
         f"Total students: {total_students}\n"
         f"Passed: {passed}\n"
         f"Failed: {failed}\n"
-        f"Class average: "
-        f"{class_average:.2f}%\n"
-        f"Top student: "
-        f"{top_student} "
+        f"Class average: {class_average:.2f}%\n"
+        f"Top student: {top_student} "
         f"({highest_average:.2f}%)"
     )
 
@@ -184,10 +198,14 @@ def generate_report():
 create_file()
 
 root = tk.Tk()
+
 root.title(
     "Student Performance Dashboard"
 )
-root.geometry("800x650")
+
+root.geometry(
+    "800x650"
+)
 
 title = tk.Label(
     root,
@@ -197,28 +215,76 @@ title = tk.Label(
 
 title.pack(pady=10)
 
-tk.Label(root, text="Student ID").pack()
-entry_id = tk.Entry(root, width=40)
+tk.Label(
+    root,
+    text="Student ID"
+).pack()
+
+entry_id = tk.Entry(
+    root,
+    width=40
+)
+
 entry_id.pack()
 
-tk.Label(root, text="Student Name").pack()
-entry_name = tk.Entry(root, width=40)
+tk.Label(
+    root,
+    text="Student Name"
+).pack()
+
+entry_name = tk.Entry(
+    root,
+    width=40
+)
+
 entry_name.pack()
 
-tk.Label(root, text="Mathematics").pack()
-entry_math = tk.Entry(root, width=40)
+tk.Label(
+    root,
+    text="Mathematics"
+).pack()
+
+entry_math = tk.Entry(
+    root,
+    width=40
+)
+
 entry_math.pack()
 
-tk.Label(root, text="Programming").pack()
-entry_programming = tk.Entry(root, width=40)
+tk.Label(
+    root,
+    text="Programming"
+).pack()
+
+entry_programming = tk.Entry(
+    root,
+    width=40
+)
+
 entry_programming.pack()
 
-tk.Label(root, text="Networking").pack()
-entry_networking = tk.Entry(root, width=40)
+tk.Label(
+    root,
+    text="Networking"
+).pack()
+
+entry_networking = tk.Entry(
+    root,
+    width=40
+)
+
 entry_networking.pack()
 
-tk.Label(root, text="Database").pack()
-entry_database = tk.Entry(root, width=40)
+tk.Label(
+    root,
+    text="Database"
+).pack()
+
+entry_database = tk.Entry(
+    root,
+    width=40
+)
+
 entry_database.pack()
 
 tk.Button(
