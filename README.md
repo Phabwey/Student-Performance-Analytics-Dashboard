@@ -9,26 +9,16 @@
 A Python-based analytics dashboard designed to manage student records, calculate academic performance, generate reports, and visualize student data. The system helps educators and administrators monitor student progress through automated analysis and graphical reports.
 
 ---
+## Features
 
-## 📌 Features
-
-✅ Add new student records
-
-✅ View all student records
-
-✅ Search students by ID or name
-
-✅ Calculate student averages
-
-✅ Determine pass/fail status
-
-✅ Export reports to CSV files
-
-✅ Generate performance charts
-
-✅ Display top-performing students
-
-✅ Analyze overall class performance
+- Add student records
+- View student records
+- Generate class reports
+- Generate charts
+- View top-performing student
+- View class performance summary
+- Validate marks (0–100)
+- Prevent duplicate student IDs
 
 ---
 
