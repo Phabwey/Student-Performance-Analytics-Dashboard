@@ -41,12 +41,8 @@ A Python-based analytics dashboard designed to manage student records, calculate
 
 The project includes a modern Tkinter-based graphical interface that allows users to:
 
-- Import student datasets
 - View performance statistics
 - Generate visual charts
-- Filter records
-- Search students
-- Export reports
 - Display summary analytics
 
 The GUI is beginner-friendly and designed for educational institutions.
@@ -68,18 +64,27 @@ The GUI is beginner-friendly and designed for educational institutions.
 
 ```text
 Student-Performance-Analytics-Dashboard/
+## 📁 Project Structure
 
-Student-Performance-Analytics-Dashboard/
+```text
+Student-Performance-Analytics-Dashboard-main/
 
 ├── main.py
 ├── gui.py
 ├── students.csv
 ├── README.md
+├── requirements.txt
+├── LICENSE
+├── Installation_Guide.pdf
+├── Project_Report.pdf
+├── User_Manual.pdf
 ├── charts.zip
 ├── docs.zip
 ├── Generate report.jpg
 ├── gui - dashboard.jpg
-└── Student-Performance-Analytics-Dashboard-main.zip
+├── view students.jpg
+├── Performance chart.jpg
+└── Pass-fail-chart.png
 ```
 
 ---
