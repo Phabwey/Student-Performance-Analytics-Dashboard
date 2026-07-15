@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 import csv
 import os
+import matplotlib.pyplot as plt
 
 FILE_NAME = "students.csv"
 
@@ -47,8 +48,6 @@ def add_student():
 
         return
 
-    # Validate marks
-
     if (
         mathematics < 0 or mathematics > 100 or
         programming < 0 or programming > 100 or
@@ -62,8 +61,6 @@ def add_student():
         )
 
         return
-
-    # Check duplicate student ID
 
     with open(FILE_NAME, "r") as file:
 
@@ -195,6 +192,93 @@ def generate_report():
     )
 
 
+def generate_chart():
+
+    passed = 0
+    failed = 0
+
+    with open(FILE_NAME, "r") as file:
+
+        reader = csv.DictReader(file)
+
+        for row in reader:
+
+            if row["status"] == "Pass":
+                passed += 1
+            else:
+                failed += 1
+
+    labels = ["Pass", "Fail"]
+    values = [passed, failed]
+
+    plt.figure(figsize=(6, 6))
+
+    plt.pie(
+        values,
+        labels=labels,
+        autopct="%1.1f%%"
+    )
+
+    plt.title(
+        "Student Performance Summary"
+    )
+
+    plt.show()
+
+
+def show_top_performer():
+
+    highest_average = 0
+    top_student = ""
+
+    with open(FILE_NAME, "r") as file:
+
+        reader = csv.DictReader(file)
+
+        for row in reader:
+
+            average = float(row["average"])
+
+            if average > highest_average:
+
+                highest_average = average
+                top_student = row["name"]
+
+    messagebox.showinfo(
+        "Top Performer",
+        f"{top_student}\nAverage: {highest_average:.2f}%"
+    )
+
+
+def class_summary():
+
+    total_students = 0
+    total_average = 0
+
+    with open(FILE_NAME, "r") as file:
+
+        reader = csv.DictReader(file)
+
+        for row in reader:
+
+            total_students += 1
+            total_average += float(row["average"])
+
+    if total_students > 0:
+
+        class_average = total_average / total_students
+
+    else:
+
+        class_average = 0
+
+    messagebox.showinfo(
+        "Class Summary",
+        f"Students: {total_students}\n"
+        f"Class Average: {class_average:.2f}%"
+    )
+
+
 create_file()
 
 root = tk.Tk()
@@ -204,7 +288,7 @@ root.title(
 )
 
 root.geometry(
-    "800x650"
+    "800x750"
 )
 
 title = tk.Label(
@@ -303,6 +387,24 @@ tk.Button(
     root,
     text="Generate Report",
     command=generate_report
+).pack(pady=5)
+
+tk.Button(
+    root,
+    text="Generate Chart",
+    command=generate_chart
+).pack(pady=5)
+
+tk.Button(
+    root,
+    text="Top Performer",
+    command=show_top_performer
+).pack(pady=5)
+
+tk.Button(
+    root,
+    text="Class Summary",
+    command=class_summary
 ).pack(pady=5)
 
 text_output = tk.Text(
