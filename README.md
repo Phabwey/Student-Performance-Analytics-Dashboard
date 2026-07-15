@@ -121,7 +121,14 @@ cd Student-Performance-Analytics-Dashboard
 ### Install dependencies
 
 ```bash
-pip install -r requirements.txt
+This project uses Python standard libraries and Tkinter.
+
+Required libraries:
+
+- tkinter
+- csv
+- os
+- matplotlib
 ```
 
 ### Run the application
