@@ -79,25 +79,17 @@ The GUI is beginner-friendly and designed for educational institutions.
 ```text
 Student-Performance-Analytics-Dashboard/
 
+Student-Performance-Analytics-Dashboard/
+
 ├── main.py
+├── gui.py
 ├── students.csv
-├── requirements.txt
 ├── README.md
-├── LICENSE
-│
-├── screenshots/
-│   ├── dashboard.png
-│   ├── reports.png
-│   └── charts.png
-│
-├── docs/
-│   ├── User_Manual.pdf
-│   ├── Installation_Guide.pdf
-│   └── Project_Report.pdf
-│
-└── charts/
-    ├── performance_chart.png
-    └── pass_fail_chart.png
+├── charts.zip
+├── docs.zip
+├── Generate report.jpg
+├── gui - dashboard.jpg
+└── Student-Performance-Analytics-Dashboard-main.zip
 ```
 
 ---
