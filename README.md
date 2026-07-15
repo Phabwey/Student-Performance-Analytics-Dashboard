@@ -195,6 +195,11 @@ ST002,Mary Johnson,65,70,68,72,68.75,Pass
 ST003,David Brown,45,50,48,52,48.75,Fail
 ST004,Sarah Williams,90,88,92,91,90.25,Pass
 ST005,Michael Jones,55,60,58,62,58.75,Pass
+ST006,Emma Wilson,35,40,38,42,38.75,Fail
+ST007,Daniel Taylor,82,79,85,80,81.50,Pass
+ST008,Olivia Martin,74,77,73,76,75.00,Pass
+ST009,James Anderson,69,71,67,70,69.25,Pass
+ST010,Sophia Thomas,95,93,97,94,94.75,Pass
 ```
 
 ### Description of Fields
