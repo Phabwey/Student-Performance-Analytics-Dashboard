@@ -21,22 +21,54 @@ def create_file():
                 "average",
                 "status"
             ])
+def add_student():
 
+    student_id = entry_id.get()
+    name = entry_name.get()
 
-if (
-    mathematics < 0 or mathematics > 100 or
-    programming < 0 or programming > 100 or
-    networking < 0 or networking > 100 or
-    database < 0 or database > 100
-):
+    try:
+        mathematics = float(entry_math.get())
+        programming = float(entry_programming.get())
+        networking = float(entry_networking.get())
+        database = float(entry_database.get())
 
-    messagebox.showerror(
-        "Error",
-        "Marks must be between 0 and 100."
-    )
+    except ValueError:
+        messagebox.showerror(
+            "Error",
+            "Please enter valid marks."
+        )
+        return
 
-    return
-    
+    if (
+        mathematics < 0 or mathematics > 100 or
+        programming < 0 or programming > 100 or
+        networking < 0 or networking > 100 or
+        database < 0 or database > 100
+    ):
+
+        messagebox.showerror(
+            "Error",
+            "Marks must be between 0 and 100."
+        )
+        return
+
+    with open(FILE_NAME, "r") as file:
+
+        reader = csv.reader(file)
+
+        next(reader)
+
+        for row in reader:
+
+            if row[0] == student_id:
+
+                messagebox.showerror(
+                    "Error",
+                    "Student ID already exists."
+                )
+
+                return
+
     average = (
         mathematics +
         programming +
@@ -67,7 +99,6 @@ if (
     )
 
     clear_fields()
-    
 
 def clear_fields():
 
