@@ -23,24 +23,20 @@ def create_file():
             ])
 
 
-def add_student():
+if (
+    mathematics < 0 or mathematics > 100 or
+    programming < 0 or programming > 100 or
+    networking < 0 or networking > 100 or
+    database < 0 or database > 100
+):
 
-    student_id = entry_id.get()
-    name = entry_name.get()
+    messagebox.showerror(
+        "Error",
+        "Marks must be between 0 and 100."
+    )
 
-    try:
-        mathematics = float(entry_math.get())
-        programming = float(entry_programming.get())
-        networking = float(entry_networking.get())
-        database = float(entry_database.get())
-
-    except ValueError:
-        messagebox.showerror(
-            "Error",
-            "Please enter valid marks."
-        )
-        return
-
+    return
+    
     average = (
         mathematics +
         programming +
@@ -71,7 +67,7 @@ def add_student():
     )
 
     clear_fields()
-
+    
 
 def clear_fields():
 
