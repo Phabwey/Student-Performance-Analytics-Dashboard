@@ -143,21 +143,17 @@ python main.py
 ## 📊 Screenshots
 
 ### Dashboard
-
-Add a screenshot of the dashboard here.
+<img width="1072" height="1158" alt="1000022862" src="https://github.com/user-attachments/assets/c88b4e9b-8738-4b84-95b8-6178d878b6a6" />
 
 ### Student Reports
+<img width="1079" height="1417" alt="1000022871" src="https://github.com/user-attachments/assets/b59cc347-2357-45a6-9c2e-9e2a1347f96c" />
 
-Add a screenshot of the reports here.
+## Charts
+### performance_chart.png
+<img width="1080" height="2412" alt="1000022848" src="https://github.com/user-attachments/assets/2fea9e11-a836-4b0c-9e2f-d97d67cbba15" />
 
-### Charts
-performance_chart.png
-
-
-
-pass_fail_chart.png
-
-
+### pass_fail_chart.png
+<img width="1254" height="1254" alt="1000022849" src="https://github.com/user-attachments/assets/1f11f1ea-0760-4ce6-83b7-592befadd2f4" />
 
 ---
 
