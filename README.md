@@ -77,13 +77,12 @@ Student-Performance-Analytics-Dashboard-main/
 ├── Installation_Guide.pdf
 ├── Project_Report.pdf
 ├── User_Manual.pdf
-├── charts.zip
-├── docs.zip
-├── Generate report.jpg
-├── gui - dashboard.jpg
-├── view students.jpg
-├── Performance chart.jpg
-└── Pass-fail-chart.png
+├── generate_report.jpg
+├── gui_dashboard.jpg
+├── view_students.jpg
+├── performance_chart.jpg
+└── pass_fail_chart.png
+
 ```
 
 ---
